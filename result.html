@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css')}}">
+    <title>Викторина</title>
+</head>
+<body>
+
+    <h1> ТЫ ПРОШЁЛ ВИКТОРИНУ</h1>
+    <h2>{{quiz_name}}</h2>
+
+    <p>Ты набрал {{user_point}} / {{quest_amount}}</p>
+
+    {% if (user_point/quest_amount) > 0.5 %}
+        <p> Хорошая работа! </p>
+    {% else %}
+        <p> Не получилось... </p>
+    {% endif %}
+</body>
+</html>
